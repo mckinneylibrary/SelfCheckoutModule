@@ -71,6 +71,10 @@ $("#logout_form").click(function(){
 $('#ce_no_more_renewals').closest('.alert').find('#ce_see_staff').hide();
 
 
+/**Change Error Button Text**/
+
+$("#try_again").html("Dismiss");
+
 //Overdue Items 
 /*if ( $('#ce_unknown_barcode, #ce_max_loans_allowed, #ce_issued_to_another, #ce_no_more_renewals, #ce_not_for_loan, #ce_too_much_debt, #ce_wthdrawn, #ce_restricted, #ce_reserved, #ce_itemnotsamebranch, #ce_expired, #ce_debarred, #ce_card_lost, #ce_gna, #ce_invalid_date, #ce_addtional_materials').length === 0 ) {
     $('#ce_see_staff').text('There is an overdue item on your account. Please see a member of the staff.');

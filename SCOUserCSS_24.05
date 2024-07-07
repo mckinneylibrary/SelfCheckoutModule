@@ -113,8 +113,12 @@ display: none;
 	background: white;
 }
 
-.sorting {
+.sorting, #finestable > thead > tr > th.psort.sorting_asc {
 	color: white;
+}
+
+.table.dataTable thead .sorting, #finestable > thead > tr > th.psort.sorting_asc {
+	background-color: #084d69;
 }
 
 .form-row {
@@ -619,8 +623,9 @@ table tr>th:nth-of-type(4),   table tr>td:nth-of-type(4){
 
 /**** Error Modal Style (Wrong Barcode Popup) ****/
 /*Button*/
+
 #try_again {
-	width: 325px;
+    width: 325px;
     height: 65px;
 	margin: auto !important;
 	color: #fff;
@@ -702,7 +707,7 @@ table tr>th:nth-of-type(4),   table tr>td:nth-of-type(4){
     display: block;
  	width: 100%;
     text-align: center;
-    content: "You have already scanned this item. It is currently checked out to your account. Click try again and continue with your next item.";
+    content: "You have already scanned this item!";
     color: black;
     margin: auto;
     padding: 25px;
@@ -733,9 +738,9 @@ iframe {
 /*** Centering OPAC Messages on Self Checkout ***/
 div.alert.alert-info {
 	margin-left: 5px; 
-background-color:rgba(255, 255, 255, 0.7);
-
+    background: rgba(255,255,255,.7);
 }
+
 
 #wrapper > div.main > div:nth-child(1) > div > div ul {
 	margin-left: -42px;
