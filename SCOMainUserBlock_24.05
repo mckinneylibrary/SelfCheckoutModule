@@ -1,15 +1,16 @@
 <link href="https://fonts.googleapis.com/css?family=Muli&amp;display=swap" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/core/jquery.cycle2.core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 <section>
 <div class="selfcheck-wrapper">
 <div id="selfcheck-slideshow" class="selfcheck-slideshow"><!--Google Slides -->
-<div class="selfcheck-slideshow"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQOJxWhlkwa1zrN5TyJIwY4JJrhd6Vfi2a1As17tE3G_CXV56ADRLeuBSZ_2dwy6XTnL-bxH1y_Z6Cl/embed?start=true&amp;loop=true&amp;delayms=9000" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+<div class="selfcheck-slideshow"><iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQOJxWhlkwa1zrN5TyJIwY4JJrhd6Vfi2a1As17tE3G_CXV56ADRLeuBSZ_2dwy6XTnL-bxH1y_Z6Cl/embed?start=true&amp;loop=true&amp;delayms=9000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" width="100%" height="100%" frameborder="0"></iframe></div>
+</div>
+</div>
+</section>
 <section>
 <div class="selfcheck-footer"><img class="selfcheck-mckinneylogo" src="https://github.com/mckinneylibrary/images/blob/master/logos/LibraryLogo.png?raw=true" alt="Mckinney Logo" />
 <p id="selfcheck-footertext"></p>
-</div>
-</section>
-</div>
 </div>
 </section>

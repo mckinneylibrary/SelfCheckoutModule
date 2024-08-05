@@ -117,6 +117,10 @@ display: none;
 	color: white;
 }
 
+.sorting_asc {
+	color: white;
+}
+
 .table.dataTable thead .sorting, #finestable > thead > tr > th.psort.sorting_asc {
 	background-color: #084d69;
 }
@@ -421,7 +425,7 @@ display: none;
 
 /*******Style of Checkout Page*******/
 
-#finestable_wrapper > div > div.table_controls {
+div.table_controls {
 display: none; 
 }
 
@@ -446,7 +450,7 @@ display: none;
   
 
 #newcheckout label:before {
-   content: 'Please place items one at a time on the pad.';
+   content: ' Please place items on the pad to checkout.';
    visibility: visible;
    font-family: "Arial", sans serif;
    line-height: 1em;
@@ -569,7 +573,7 @@ i.fa.fa-check {
 
 .sco #loanTable {
    max-height: 40vh;
-   width: 1038px;
+   width: 920px;
    display:block;
    margin-top: 5px;
 }
@@ -829,4 +833,10 @@ border-radius: 5px;
 /*** Fixing the Header Height Issue from Adding the banner to OPAC 09.26.23 -- KS ***/
 #header-region {
 height: 0;
+}
+
+/**** hiding the dates on alerts *****/
+
+div.alert em {
+display: none;
 }

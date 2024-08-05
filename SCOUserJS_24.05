@@ -13,9 +13,6 @@ setInterval(function() {
 
 });
 
-/**** Placeholder Text in Login Bar ****/
-$('#patronlogin').attr('placeholder', '   Scan your Library Card');
-
 /*** Patch that creates a popup when the wrong barcode is scanned ***/
 if ( $('.alert-warning p:contains("was not found in the database")').length ) {
 	$('body').append(`<div id="sco_error" class="modal" tabindex="-1" role="dialog">
@@ -71,11 +68,60 @@ $("#logout_form").click(function(){
 $('#ce_no_more_renewals').closest('.alert').find('#ce_see_staff').hide();
 
 
-/**Change Error Button Text**/
-
-$("#try_again").html("Dismiss");
-
 //Overdue Items 
 /*if ( $('#ce_unknown_barcode, #ce_max_loans_allowed, #ce_issued_to_another, #ce_no_more_renewals, #ce_not_for_loan, #ce_too_much_debt, #ce_wthdrawn, #ce_restricted, #ce_reserved, #ce_itemnotsamebranch, #ce_expired, #ce_debarred, #ce_card_lost, #ce_gna, #ce_invalid_date, #ce_addtional_materials').length === 0 ) {
     $('#ce_see_staff').text('There is an overdue item on your account. Please see a member of the staff.');
 }*/
+
+$('.alert-info:contains("Item checked out")').hide();
+
+
+/* SUMMER READING PARTY MODE */
+if ($('.alert li:contains("Summer Reading Star!")').length) {
+  $('body').addClass("party");
+}
+
+/* Define the party function */
+function party(emoji) {
+  setTimeout(() => {
+    jsConfetti.addConfetti({
+      emojis: emoji,
+      emojiSize: 70,
+      confettiNumber: 99,
+    });
+  }, 200);
+}
+
+/* Trigger confetti for Party Mode */
+if ( $('.alert li').length && $('.alert li:contains("Summer Reading Star!")').length ) { 
+  $('body').addClass("party");
+}
+  
+  
+/* Trigger confetti for Party Mode */
+if ($('body').is('#sco_main')) {
+  if ($('.alert:contains("Summer Reading Star!")').length) {
+    const confetti_canvas = document.getElementById('party_canvas');
+    const jsConfetti = new JSConfetti({ confetti_canvas });
+
+    function party() {
+      setTimeout(() => {
+        jsConfetti.addConfetti({
+          emojis: ['🎉', '⭐', '☀️'], // Confetti, star, and sun emojis
+          emojiSize: 70,
+          confettiNumber: 99,
+        });
+      }, 200);
+    }
+    
+    party(); // Call the function to trigger the confetti
+  }
+}
+
+/******* END SUMMER CONFETTI *************/
+
+/******** Change Try Again Button to Dismiss *******/
+
+$("#try_again").text("Dismiss");
+
+/******** End Try Again Button *************/
